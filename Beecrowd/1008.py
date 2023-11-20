@@ -1,0 +1,6 @@
+num=int(input())
+w=int(input())
+a=float(input())
+sal=float((w*a))
+print("NUMBER =",num)
+print(f'SALARY = U$ {sal:.2f}')
