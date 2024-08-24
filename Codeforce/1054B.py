@@ -19,3 +19,5 @@ for _ in range(n):
     rectangles.append((w, h))
 result = can_make_non_ascending(n, rectangles)
 print(result)
+
+
