@@ -1,0 +1,11 @@
+class Solution:
+    def minAddToMakeValid(self, s: str) -> int:
+        left = right = 0
+        for char in s:
+            if char == '(':
+                left += 1
+            elif left > 0:
+                left -= 1
+            else:
+                right += 1
+        return left + right
