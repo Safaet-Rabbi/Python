@@ -1,0 +1,16 @@
+class Solution:
+    def evaluate(self, s: str, knowledge: list[list[str]]) -> str:
+        mp = dict(knowledge)
+        res = []
+        i = 0
+
+        while i < len(s):
+            if s[i] == '(':
+                j = s.index(')', i)
+                res.append(mp.get(s[i + 1:j], '?'))
+                i = j + 1
+            else:
+                res.append(s[i])
+                i += 1
+
+        return ''.join(res)
